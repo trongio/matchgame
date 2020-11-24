@@ -1,0 +1,135 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #ffd5a5;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.gamemode {
+  text-align: center;
+  margin-top: 22%;
+}
+
+#won {
+  text-align: center;
+  margin-top: 22%;
+  font-size: 300px;
+  color: #00c800;
+}
+
+.lost {
+  text-align: center;
+  margin-top: 22%;
+  font-size: 250px;
+  color: #c80000;
+}
+
+.lost button {
+  font-size: 70px;
+  padding: 0px 7px 8px 7px;
+  background-color: red;
+}
+
+.gameboard-container {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 2px;
+  padding-top: 100px;
+  -ms-grid-columns: auto auto auto auto;
+      grid-template-columns: auto auto auto auto;
+}
+
+.rotate {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: 215px;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  -webkit-transition: -webkit-transform 0.8s;
+  transition: -webkit-transform 0.8s;
+  transition: transform 0.8s;
+  transition: transform 0.8s, -webkit-transform 0.8s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  -webkit-box-shadow: inset 0 0 14px 0px #494949;
+          box-shadow: inset 0 0 14px 0px #494949;
+  background: #833ab4;
+  background: -webkit-gradient(linear, left top, right top, from(#833ab4), color-stop(50%, #fd1d1d), to(#fcb045));
+  background: linear-gradient(90deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
+}
+
+/* Style the back side */
+.flip-card-back {
+  text-align: center;
+  padding-top: 10px;
+  background-color: dodgerblue;
+  color: white;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.flip-card-back i {
+  font-size: 200px;
+}
+
+.box {
+  float: left;
+  width: 100px;
+  height: 100px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  background-color: #0000FF;
+}
+
+.none {
+  display: none;
+}
+
+.bar {
+  height: 10px;
+  background: red;
+  width: 0vw;
+}
+/*# sourceMappingURL=app.css.map */
